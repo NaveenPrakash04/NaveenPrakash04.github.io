@@ -10,7 +10,6 @@ const api = {
   
   function setQuery(evt) {
     if (evt.keyCode == 13) {
-        console.log(searchbox.value)
       getResults(searchbox.value);
     }
   }
@@ -24,7 +23,6 @@ const api = {
   }
   
   function displayResults(weather) {
-    console.log(weather)
     let city = document.querySelector(".location .city");
     city.innerText = `${weather.name}, ${weather.sys.country}`;
   
@@ -68,7 +66,6 @@ const api = {
       "Friday",
       "Saturday",
     ];
-    console.log(d.getDay())
     let day = days[d.getDay()];
     let date = d.getDate();
     let month = months[d.getMonth()];
