@@ -4,8 +4,6 @@ const api = {
   };
   var name = "naveen"
   const searchbox = document.querySelector(".search-box");
-
-  console.log(searchbox)
   searchbox.addEventListener("keypress", setQuery);
   
   function setQuery(evt) {
