@@ -2,13 +2,15 @@ const api = {
     key: "15443127e61e145626825ec8e8bd99d7",
     base: "https://api.openweathermap.org/data/2.5/",
   };
-  
+  var name = "naveen"
   const searchbox = document.querySelector(".search-box");
+
   console.log(searchbox)
   searchbox.addEventListener("keypress", setQuery);
   
   function setQuery(evt) {
     if (evt.keyCode == 13) {
+        console.log(searchbox.value)
       getResults(searchbox.value);
     }
   }
@@ -22,6 +24,7 @@ const api = {
   }
   
   function displayResults(weather) {
+    console.log(weather)
     let city = document.querySelector(".location .city");
     city.innerText = `${weather.name}, ${weather.sys.country}`;
   
@@ -65,7 +68,7 @@ const api = {
       "Friday",
       "Saturday",
     ];
-  
+    console.log(d.getDay())
     let day = days[d.getDay()];
     let date = d.getDate();
     let month = months[d.getMonth()];
